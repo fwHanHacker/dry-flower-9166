@@ -1,8 +1,31 @@
 {
-  "name": "vite-vue-template",
+  "name": "spark-edge-guardians",
   "installCommand": "npm install",
+  "buildCommand": "npm run build",
   "assets": {
     "directory": "./dist",
     "notFoundStrategy": "singlePageApplication"
+  },
+  "routes": [
+    {
+      "path": "/api/*",
+      "origin": {
+        "type": "function",
+        "function": "functions/api/$1.ts"
+      }
+    },
+    {
+      "path": "/ws",
+      "origin": {
+        "type": "function",
+        "function": "functions/websocket/index.ts"
+      }
+    }
+  ],
+  "bindings": {
+    "GAME_KV": {
+      "type": "kv_namespace",
+      "id": "947657837918670848"
+    }
   }
 }
