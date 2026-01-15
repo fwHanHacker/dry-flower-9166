@@ -6,6 +6,9 @@
     "directory": "./dist",
     "notFoundStrategy": "singlePageApplication"
   },
+  "functions": {
+    "directory": "./functions"
+  },
   "routes": [
     {
       "path": "/api/*",

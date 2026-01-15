@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "deploy": "echo '请执行 git push 推送到 GitHub，ESA 会自动触发部署'",
+    "login": "npx --registry=https://registry.npmmirror.com @aliyun/esa-cli login",
+    "deploy": "npx --registry=https://registry.npmmirror.com @aliyun/esa-cli deploy",
     "preview": "vite preview",
     "count": "node scripts/count-lines.js"
   },
